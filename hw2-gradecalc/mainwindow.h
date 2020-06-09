@@ -21,3 +21,26 @@ private:
 	
 };
 #endif // MAINWINDOW_H
+
+
+/*
+ 
+ window [
+ select option for class
+ display homework and test grade inputs
+ select option for grading scheme
+ display final grade
+ ]
+ 
+ components [
+ select option: radio button or combo box
+ display outputs: labels and sliders
+ select option: radio button or combo box
+ display final grade: label with math formula of grades
+ ]
+ 
+ - find way to identify which option is picked and change display and grading formula based on that
+ - store each grade in a vector, then calculate using indices' values (specific indices for different grade)
+ - store final grade as double var
+ 
+ */

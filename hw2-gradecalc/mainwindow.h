@@ -10,6 +10,10 @@
 #define MAINWINDOW_H
 
 #include <QMainWindow>
+#include <QGridLayout>
+#include <QComboBox>
+#include <QLabel>
+#include <QSpinBox>
 
 class MainWindow : public QMainWindow
 {

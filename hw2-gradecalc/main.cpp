@@ -6,10 +6,14 @@
 //  Copyright © 2020 John Kim. All rights reserved.
 //
 
-#include <iostream>
+#include "mainwindow.h"
 
-int main(int argc, const char * argv[]) {
-	// insert code here...
-	std::cout << "Hello, World!\n";
-	return 0;
+#include <QApplication>
+
+int main(int argc, char *argv[])
+{
+	QApplication a(argc, argv);
+	MainWindow w;
+	w.show();
+	return a.exec();
 }

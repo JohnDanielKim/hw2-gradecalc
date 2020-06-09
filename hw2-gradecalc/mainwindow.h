@@ -27,6 +27,8 @@ private:
  
  type of layout: vbox, form, grid, stacked
  - do grid for exact placing
+ https://doc.qt.io/qt-5/qlayout.html
+ https://doc.qt.io/qt-5/qgridlayout.html
  
  window [
  select option for class

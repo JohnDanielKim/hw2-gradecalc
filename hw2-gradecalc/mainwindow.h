@@ -17,13 +17,22 @@
 
 class MainWindow : public QMainWindow
 {
+	
 	Q_OBJECT
 	
 public:
+	
 	MainWindow(QWidget *parent = nullptr);
 	~MainWindow();
 	
 private:
+	
+	QGridLayout* layout;
+	QComboBox* comboBox;
+	QLabel* label;
+	QSpinBox* spinBox;
+	QVector<int>* vec;
+	QVariant* v;
 	
 };
 #endif // MAINWINDOW_H
@@ -45,10 +54,14 @@ private:
  
  components [
  select option: radio button or combo box
- display outputs: labels and sliders
+ display outputs: labels and spinboxes
  select option: radio button or combo box
  display final grade: label with math formula of grades
  ]
+ https://doc.qt.io/qt-5/qradiobutton.html
+ https://doc.qt.io/qt-5/qcombobox.html
+ https://doc.qt.io/qt-5/qlabel.html
+ https://doc.qt.io/qt-5/qspinbox.html
  
  - find way to identify which option is picked and change display and grading formula based on that
  - store each grade in a vector, then calculate using indices' values (specific indices for different grade)

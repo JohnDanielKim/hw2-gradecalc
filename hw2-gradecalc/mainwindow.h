@@ -25,6 +25,9 @@ private:
 
 /*
  
+ type of layout: vbox, form, grid, stacked
+ - do grid for exact placing
+ 
  window [
  select option for class
  display homework and test grade inputs

@@ -6,9 +6,18 @@
 //  Copyright © 2020 John Kim. All rights reserved.
 //
 
-#ifndef mainwindow_h
-#define mainwindow_h
+#ifndef MAINWINDOW_H
+#define MAINWINDOW_H
 
-#include <stdio.h>
+#include <QMainWindow>
 
-#endif /* mainwindow_h */
+class MainWindow : public QMainWindow
+{
+	Q_OBJECT
+	
+public:
+	
+private:
+	
+};
+#endif // MAINWINDOW_H

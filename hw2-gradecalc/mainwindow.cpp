@@ -7,3 +7,23 @@
 //
 
 #include "mainwindow.h"
+#include <string>
+#include <QString>
+#include <QVariant>
+#include <QVector>
+
+MainWindow::MainWindow(QWidget *parent)
+: QMainWindow(parent)
+{
+	
+	QWidget* centralWidget = new QWidget();
+	
+	centralWidget->setLayout(layout);
+	setCentralWidget(centralWidget);
+	
+}
+
+MainWindow::~MainWindow()
+{
+}
+

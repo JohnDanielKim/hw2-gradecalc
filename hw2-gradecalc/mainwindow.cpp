@@ -146,7 +146,51 @@ MainWindow::MainWindow(QWidget *parent)
 		}
 		
 		if (index == 2) {
-			
+			label = new QLabel("Homework 1: ");
+			layout->addWidget(label, 2, 1);
+			spinBox = new QSpinBox();
+			layout->addWidget(spinBox, 2, 2);
+			spinBox->setRange(1, 100);
+			connect(spinBox, QOverload<int>::of(&QSpinBox::valueChanged),
+			        [=](int val){
+				        vec->insert(0, val);
+			        });
+			label = new QLabel("Homework 2: ");
+			layout->addWidget(label, 3, 1);
+			spinBox = new QSpinBox();
+			layout->addWidget(spinBox, 3, 2);
+			spinBox->setRange(1, 100);
+			connect(spinBox, QOverload<int>::of(&QSpinBox::valueChanged),
+			        [=](int val){
+				        vec->insert(1, val);
+			        });
+			label = new QLabel("Midterm: ");
+			layout->addWidget(label, 10, 1);
+			spinBox = new QSpinBox();
+			layout->addWidget(spinBox, 10, 2);
+			spinBox->setRange(1, 100);
+			connect(spinBox, QOverload<int>::of(&QSpinBox::valueChanged),
+			        [=](int val){
+				        vec->insert(8, val);
+			        });
+			label = new QLabel("Final Exam: ");
+			layout->addWidget(label, 11, 1);
+			spinBox = new QSpinBox();
+			layout->addWidget(spinBox, 11, 2);
+			spinBox->setRange(1, 100);
+			connect(spinBox, QOverload<int>::of(&QSpinBox::valueChanged),
+			        [=](int val){
+				        vec->insert(10, val);
+			        });
+			label = new QLabel("Final Project: ");
+			layout->addWidget(label, 12, 1);
+			spinBox = new QSpinBox();
+			layout->addWidget(spinBox, 12, 2);
+			spinBox->setRange(1, 100);
+			connect(spinBox, QOverload<int>::of(&QSpinBox::valueChanged),
+			        [=](int val){
+				        vec->insert(11, val);
+			        });
 			
 			comboBox = new QComboBox();
 			comboBox->insertItem(0, "", v);

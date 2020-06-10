@@ -20,6 +20,11 @@ MainWindow::MainWindow(QWidget *parent)
 	comboBox = new QComboBox();
 	QVariant v(0);
 	
+	comboBox->insertItem(0, "", v);
+	comboBox->insertItem(1, "Pic 10B", v);
+	comboBox->insertItem(2, "Pic 10C", v);
+	layout->addWidget(comboBox, 1, 1);
+	
 	
 	
 	QWidget* centralWidget = new QWidget();

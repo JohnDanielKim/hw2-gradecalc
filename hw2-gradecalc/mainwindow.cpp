@@ -25,8 +25,46 @@ MainWindow::MainWindow(QWidget *parent)
 	comboBox->insertItem(2, "Pic 10C", v);
 	layout->addWidget(comboBox, 1, 1);
 	
-	connect(comboBox, QOverload<int>::of(&QComboBox::currentIndexChanged), [=](int index){
+	connect(comboBox, QOverload<int>::of(&QComboBox::currentIndexChanged), [=] (int index){
+		if (index == 1) {
+			
+			
+			comboBox = new QComboBox();
+			comboBox->insertItem(0, "", v);
+			comboBox->insertItem(1, "Grading Scheme A", v);
+			comboBox->insertItem(2, "Grading Scheme B", v);
+			layout->addWidget(comboBox, 2, 3);
+			
+			connect(comboBox, QOverload<int>::of(&QComboBox::currentIndexChanged), [=] (int index){
+				if (index == 1) {
+					
+				}
+				
+				if (index == 2) {
+					
+				}
+			});
+		}
 		
+		if (index == 2) {
+			
+			
+			comboBox = new QComboBox();
+			comboBox->insertItem(0, "", v);
+			comboBox->insertItem(1, "Grading Scheme A", v);
+			comboBox->insertItem(2, "Grading Scheme B", v);
+			layout->addWidget(comboBox, 2, 3);
+			
+			connect(comboBox, QOverload<int>::of(&QComboBox::currentIndexChanged), [=] (int index){
+				if (index == 1) {
+					
+				}
+				
+				if (index == 2) {
+					
+				}
+			});
+		}
 	});
 	
 	QWidget* centralWidget = new QWidget();

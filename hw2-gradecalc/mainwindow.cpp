@@ -135,13 +135,29 @@ MainWindow::MainWindow(QWidget *parent)
 			layout->addWidget(comboBox, 2, 3);
 			
 			connect(comboBox, QOverload<int>::of(&QComboBox::currentIndexChanged), [=] (int index){
+				
+				label = new QLabel("Final score: ");
+				layout->addWidget(label, 3, 3);
+				double grade = 0;
+				for (int i = 0; i < 8; i++) {
+					grade += vec->at(i);
+				}
+				grade = 0.25 * (grade / 8);
+				
 				if (index == 1) {
-					
+					grade += ((0.2 * vec->at(8)) + (0.2 * vec->at(9)) + (0.35 * vec->at(10)));
 				}
 				
 				if (index == 2) {
-					
+					if (vec->at(8) > vec->at(9)) {
+						grade += ((0.3 * vec->at(8)) + (0.45 * vec->at(10)));
+					} else {
+						grade += ((0.3 * vec->at(9)) + (0.45 * vec->at(10)));
+					}
 				}
+				
+				label = new QLabel(QString::number(grade));
+				layout->addWidget(label, 4, 3);
 			});
 		}
 		
@@ -199,13 +215,24 @@ MainWindow::MainWindow(QWidget *parent)
 			layout->addWidget(comboBox, 2, 3);
 			
 			connect(comboBox, QOverload<int>::of(&QComboBox::currentIndexChanged), [=] (int index){
-				if (index == 1) {
-					
+				
+				label = new QLabel("Final score: ");
+				layout->addWidget(label, 3, 3);
+				double grade = 0;
+				for (int i = 0; i < 2; i++) {
+					grade += vec->at(i);
 				}
+				grade = 0.15 * (grade / 2);
+
+				if (index == 1) {
+					grade += ((0.25 * vec->at(8)) + (0.3 * vec->at(10)) + (0.35 * vec->at(11)));				}
 				
 				if (index == 2) {
-					
+					grade += ((0.5 * vec->at(10)) + (0.35 * vec->at(11)));
 				}
+				
+				label = new QLabel(QString::number(grade));
+				layout->addWidget(label, 4, 3);
 			});
 		}
 	});

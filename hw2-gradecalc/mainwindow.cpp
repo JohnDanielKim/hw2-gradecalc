@@ -25,7 +25,9 @@ MainWindow::MainWindow(QWidget *parent)
 	comboBox->insertItem(2, "Pic 10C", v);
 	layout->addWidget(comboBox, 1, 1);
 	
-	
+	connect(comboBox, QOverload<int>::of(&QComboBox::currentIndexChanged), [=](int index){
+		
+	});
 	
 	QWidget* centralWidget = new QWidget();
 	

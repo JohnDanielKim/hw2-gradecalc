@@ -16,6 +16,12 @@ MainWindow::MainWindow(QWidget *parent)
 : QMainWindow(parent)
 {
 	
+	layout = new QGridLayout();
+	comboBox = new QComboBox();
+	QVariant v(0);
+	
+	
+	
 	QWidget* centralWidget = new QWidget();
 	
 	centralWidget->setLayout(layout);

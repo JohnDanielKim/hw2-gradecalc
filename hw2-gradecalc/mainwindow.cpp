@@ -27,8 +27,16 @@ MainWindow::MainWindow(QWidget *parent)
 	
 	connect(comboBox, QOverload<int>::of(&QComboBox::currentIndexChanged), [=] (int index){
 		if (index == 1) {
-			
-			
+			label = new QLabel("Homework 1: ");
+			layout->addWidget(label, 2, 1);
+			spinBox = new QSpinBox();
+			layout->addWidget(spinBox, 2, 2);
+			spinBox->setRange(1, 100);
+			connect(spinBox, QOverload<int>::of(&QSpinBox::valueChanged),
+			        [=](int val){
+				        vec->insert(0, val);
+			        });
+
 			comboBox = new QComboBox();
 			comboBox->insertItem(0, "", v);
 			comboBox->insertItem(1, "Grading Scheme A", v);
